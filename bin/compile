@@ -16,4 +16,4 @@ echo "configuring"
 echo "installing"
 make install
 echo "done"
-done < .SYMPHONY
+which symphony
