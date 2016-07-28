@@ -9,6 +9,8 @@ echo "-----> Found SYMPHONY flag"
 
 echo "downloading http://www.coin-or.org/download/source/SYMPHONY/SYMPHONY-5.6.6.tgz"
 curl -s http://www.coin-or.org/download/source/SYMPHONY/SYMPHONY-5.6.6.tgz | tar xz
+echo "changing to SYMPHONY-5.6.6"
+cd ./SYMPHONY-5.6.6
 echo "configuring"
 ./configure --prefix=/symphony/
 echo "installing"
