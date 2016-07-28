@@ -12,7 +12,7 @@ curl -s http://www.coin-or.org/download/source/SYMPHONY/SYMPHONY-5.6.6.tgz | tar
 echo "changing to SYMPHONY-5.6.6"
 cd ./SYMPHONY-5.6.6
 echo "configuring"
-./configure
+./configure  --prefix=/tmp/symphony/
 echo "installing"
 make install
 echo "done"
