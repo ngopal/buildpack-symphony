@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ -f $1/.SYMPHONY ]; then
+    echo "installing Symphony"
+    exit 0
+else
+    exit 1
+fi
