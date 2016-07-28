@@ -7,16 +7,12 @@ indent() {
 
 echo "-----> Found SYMPHONY flag"
 
-# Bail early but noisily
-if [ ! -s $1/.SYMPHONY ]; then
-  echo ".SYMPHONY not found. Skipping." | indent
-  exit 0
-fi
-
-cd $1
-
 echo "downloading http://www.coin-or.org/download/source/SYMPHONY/SYMPHONY-5.6.6.tgz"
 curl -s http://www.coin-or.org/download/source/SYMPHONY/SYMPHONY-5.6.6.tgz | tar xz
+echo "configuring"
 ./configure --prefix=/symphony/
+echo "installing"
 make install
-done < .SYMPHONY
+echo "done"
+done
+
